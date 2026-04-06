@@ -1,20 +1,41 @@
-# eCommerce Product Add to Cart Functionality Vuejs
+# eCommerce Cart System UI (Vue + Vite)
 
-Live Project: https://ecommerce-product-add-to-cart-vuejs.netlify.app/
+A lightweight, responsive e-commerce UI built with Vue and Vite. It includes product listing with pagination and a reactive cart (add/remove/update quantity) with automatic totals.
 
-Elevate your e-commerce capabilities with our compact yet powerful Vue.js application for product cart management. This lightweight solution combines responsiveness with efficiency, delivering a seamless shopping experience for both customers and developers.
+## Links
 
-🛒 Seamless Shopping: Intuitively add, remove, and adjust product quantities with real-time reactivity, enhancing the shopping journey.
+- **Live demo**: [ecommerce-product-add-to-cart-vuejs.netlify.app](https://ecommerce-product-add-to-cart-vuejs.netlify.app/)
+- **Repository**: [github.com/ShuvaMallickPro/ecommerce-cart-system-ui](https://github.com/ShuvaMallickPro/ecommerce-cart-system-ui)
 
-📦 Pagination: Navigate through product listings effortlessly with built-in pagination, making browsing smooth and efficient.
+## Features
 
-🔄 Auto Calculation: Experience automated calculations as you modify your cart, ensuring accurate pricing and a hassle-free checkout process.
+- **Cart management**: add/remove items, update quantities with reactive UI
+- **Pagination**: browse product listings smoothly
+- **Auto calculation**: totals update automatically when the cart changes
+- **Responsive UI**: works well on mobile, tablet, and desktop
 
-🎨 Responsive Design: Enjoy consistent performance across devices, thanks to our application's responsive design that adapts to various screen sizes.
+## Edit product image URLs
 
-⚡ Optimized Performance: Our Vue.js app leverages efficient techniques, guaranteeing swift loading times and smooth interactions.
+Product data is stored in `src/data/products.js`. Each item has an `image` field.
 
-🔧 Easy Customization: Tailor the app to suit your brand's aesthetics using Vue.js components that are easily customizable and extendable.
+### Option A: Use any external image URL (fastest)
+
+Update the `image` value directly:
+
+```js
+image: "https://example.com/my-product-image.jpg";
+```
+
+### Option B: Use local images (recommended for reliability)
+
+1. Put images in `src/assets/products/` (example: `src/assets/products/p1.png`).
+2. Update `image` in `src/data/products.js` using Vite’s asset URL helper:
+
+```js
+image: new URL("../assets/products/p1.png", import.meta.url).href;
+```
+
+This avoids broken external links and ensures images work in both development and production builds.
 
 ## Customize configuration
 
