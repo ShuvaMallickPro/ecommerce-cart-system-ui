@@ -3,7 +3,12 @@
     <div
       class="h-60 max-h-60 overflow-hidden justify-center items-center px-16 py-2 content-center"
     >
-      <img class="w-36 mx-auto py-3" :src="product.image" alt="" />
+      <img
+        class="w-36 mx-auto py-3"
+        :src="product.image"
+        :alt="product.title"
+        @error="handleImgError"
+      />
     </div>
 
     <div class="card-body py-4 px-5">
@@ -31,6 +36,7 @@
 <script>
 import { mapActions } from "pinia";
 import { useCartStore } from "../store/cartsStore";
+import { PLACEHOLDER_PRODUCT_IMAGE_URL } from "../utils/images";
 
 export default {
   props: {
@@ -43,6 +49,11 @@ export default {
 
   methods: {
     ...mapActions(useCartStore, ["handleAddToCart"]),
+    handleImgError(e) {
+      if (e?.target?.src !== PLACEHOLDER_PRODUCT_IMAGE_URL) {
+        e.target.src = PLACEHOLDER_PRODUCT_IMAGE_URL;
+      }
+    },
   },
 };
 </script>

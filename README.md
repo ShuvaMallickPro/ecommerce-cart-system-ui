@@ -1,41 +1,65 @@
-# eCommerce Product Add to Cart Functionality Pinia State Management Vuejs
+# E-commerce Cart UI (Vue 3 + Pinia)
 
-Live Project: https://product-addtocart-statemanagement-vue.netlify.app/
+A lightweight e-commerce UI that demonstrates **add to cart**, **quantity controls**, and **reactive totals** using **Vue 3** and **Pinia**.
 
-Elevate your e-commerce capabilities with our compact yet powerful Vue.js application for product cart management. This lightweight solution combines responsiveness with efficiency, delivering a seamless shopping experience for both customers and developers.
+- **Live demo**: [product-addtocart-statemanagement-vue.netlify.app](https://product-addtocart-statemanagement-vue.netlify.app/)
+- **Repository**: [github.com/ShuvaMallickPro/ecommerce-cart-system-ui](https://github.com/ShuvaMallickPro/ecommerce-cart-system-ui)
 
-⚡ State Management: Implement Vue Pinia State Management Feature
+## Features
 
-🛒 Seamless Shopping: Intuitively add, remove, and adjust product quantities with real-time reactivity, enhancing the shopping journey.
+- **Cart management**: Add/remove items and update quantities
+- **State management**: Centralized store with Pinia
+- **Auto calculation**: Totals update instantly as the cart changes
+- **Pagination**: Browse product listings efficiently
+- **Responsive UI**: Works across desktop/tablet/mobile
 
-📦 Pagination: Navigate through product listings effortlessly with built-in pagination, making browsing smooth and efficient.
+## Tech stack
 
-🔄 Auto Calculation: Experience automated calculations as you modify your cart, ensuring accurate pricing and a hassle-free checkout process.
+- **Vue**: 3.x
+- **State management**: Pinia
+- **Build tool**: Vite
+- **Styling**: Tailwind CSS
 
-🎨 Responsive Design: Enjoy consistent performance across devices, thanks to our application's responsive design that adapts to various screen sizes.
+## Getting started (step-by-step)
 
-⚡ Optimized Performance: Our Vue.js app leverages efficient techniques, guaranteeing swift loading times and smooth interactions.
+### 1) Prerequisites
 
-🔧 Easy Customization: Tailor the app to suit your brand's aesthetics using Vue.js components that are easily customizable and extendable.
+- **Node.js**: Recommended \(LTS version\)
+- **npm**: Comes with Node.js
 
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+### 2) Install dependencies
 
 ```sh
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### 3) Run the project locally (development)
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+Vite will print a local URL (usually `http://localhost:5173`)—open it in your browser.
+
+### 4) Build for production
 
 ```sh
 npm run build
 ```
+
+### 5) Preview the production build locally
+
+```sh
+npm run preview
+```
+
+## Available scripts
+
+- **`npm run dev`**: Start the dev server
+- **`npm run build`**: Build for production
+- **`npm run preview`**: Preview the production build locally
+
+## Project notes
+
+- **Products data**: `src/data/products.js`
+- **Vite config reference**: [vitejs.dev/config](https://vitejs.dev/config/)

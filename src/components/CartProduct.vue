@@ -8,7 +8,12 @@
       </button>
     </td>
     <td class="px-2 py-4">
-      <img :src="cartProduct.image" class="w-20" alt="" />
+      <img
+        :src="cartProduct.image"
+        class="w-20"
+        :alt="cartProduct.title"
+        @error="handleImgError"
+      />
     </td>
     <td class="px-2 py-4">
       <div>
@@ -54,6 +59,7 @@
 <script>
 import { mapActions } from "pinia";
 import { useCartStore } from "../store/cartsStore";
+import { PLACEHOLDER_PRODUCT_IMAGE_URL } from "../utils/images";
 export default {
   props: {
     cartProduct: Object,
@@ -65,6 +71,11 @@ export default {
       "handleProductQuantityMinus",
       "handleDeleteProduct",
     ]),
+    handleImgError(e) {
+      if (e?.target?.src !== PLACEHOLDER_PRODUCT_IMAGE_URL) {
+        e.target.src = PLACEHOLDER_PRODUCT_IMAGE_URL;
+      }
+    },
   },
 };
 </script>
